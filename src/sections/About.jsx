@@ -40,7 +40,7 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Building scalable applications,
               <span className="font-serif italic font-normal text-white">
                 {" "}
                 one component at a time.
@@ -49,30 +49,31 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I'm Anupam Kumar, a passionate Full Stack Developer specializing
+                in Java, Spring Boot, React, and modern web technologies. As a
+                recent Computer Science graduate, I focus on building real-world
+                applications that solve meaningful problems and deliver seamless
+                user experiences.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I have developed enterprise-style projects including a
+                multi-tenant SaaS POS platform and a fully functional e-commerce
+                system with secure payment integrations. My experience spans
+                backend architecture, REST API development, database design, and
+                responsive frontend engineering.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Currently, I am expanding my expertise through hands-on industry
+                training and continuous learning, with the goal of becoming a
+                software engineer who builds scalable, high-performance systems
+                that create real impact.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "I believe great software is built through consistency,
+                curiosity, and a commitment to continuous improvement."
               </p>
             </div>
           </div>
