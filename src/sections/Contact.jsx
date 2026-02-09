@@ -69,7 +69,7 @@ export const Contact = () => {
           message: formData.message,
           time: new Date().toLocaleString(), // ⭐ IMPORTANT
         },
-        publicKey
+        publicKey,
       );
 
       setSubmitStatus({
@@ -82,30 +82,29 @@ export const Contact = () => {
         email: "",
         message: "",
       });
-
     } catch (err) {
       console.error("EmailJS error:", err);
 
       setSubmitStatus({
         type: "error",
-        message:
-          "Failed to send message. Please try again later.",
+        message: "Failed to send message. Please try again later.",
       });
-
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full">
+    <section
+      id="contact"
+      className="py-20 sm:py-24 md:py-32 relative overflow-x-hidden"
+    >
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
@@ -125,9 +124,9 @@ export const Contact = () => {
           </p>
         </div>
 
-          {/* FORM */}
-         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+        {/* FORM */}
+       <div className="grid lg:grid-cols-2 gap-8">
+          <div className="glass p-5 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
@@ -135,7 +134,7 @@ export const Contact = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   Name
-               </label>
+                </label>
                 <input
                   id="name"
                   type="text"
@@ -168,8 +167,7 @@ export const Contact = () => {
                 />
               </div>
 
-
-               <div>
+              <div>
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
@@ -188,7 +186,7 @@ export const Contact = () => {
                 />
               </div>
 
-               <Button
+              <Button
                 className="w-full"
                 type="submit"
                 size="lg"
@@ -224,9 +222,9 @@ export const Contact = () => {
             </form>
           </div>
 
-           {/* Contact Info */}
+          {/* Contact Info */}
           <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
+            <div className="glass rounded-3xl p-5 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information
               </h3>
@@ -252,8 +250,8 @@ export const Contact = () => {
               </div>
             </div>
 
-             {/* Availability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
+            {/* Availability Card */}
+            <div className="glass rounded-3xl p-5 sm:p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium">Currently Available</span>
