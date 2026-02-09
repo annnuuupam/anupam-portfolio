@@ -82,9 +82,17 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            {/* Contact CTA */}
+            <a
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="inline-flex items-center justify-center rounded-xl
+                   bg-primary text-primary-foreground
+                   px-6 py-3 text-base font-medium
+                   hover:opacity-90 transition"
+            >
               Contact Me
-            </Button>
+            </a>
           </div>
         </div>
       )}
