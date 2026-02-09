@@ -3,26 +3,27 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Full Stack Development",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Building end-to-end applications using Java, Spring Boot, React, and modern web technologies with a focus on scalability.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Scalable Systems",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Designing backend architectures, REST APIs, and database structures that support high-performance applications.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Real-World Projects",
+    description:
+      "Developed enterprise-style solutions including a SaaS POS platform and a secure full-stack e-commerce system.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Continuous Learning",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Constantly improving through hands-on development, industry training, and exploring modern software practices.",
   },
 ];
 
