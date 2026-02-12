@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 const testimonials = [
   {
@@ -49,7 +50,7 @@ export const Testimonials = () => {
 
   const previous = () => {
     setActiveIdx(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -59,19 +60,30 @@ export const Testimonials = () => {
 
     const interval = setInterval(() => {
       next();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [paused]);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      setPaused(true);
+      next();
+    },
+    onSwipedRight: () => {
+      setPaused(true);
+      previous();
+    },
+    preventScrollOnSwipe: true,
+    trackMouse: true,
+  });
+
   return (
     <section id="testimonials" className="py-32 relative overflow-hidden">
-      
       {/* Glow Background */}
       <div className="absolute top-1/2 left-1/2 w-[900px] h-[900px] bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
       <div className="container mx-auto px-6 relative z-10">
-        
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-primary uppercase tracking-widest text-sm font-semibold">
@@ -88,12 +100,12 @@ export const Testimonials = () => {
 
         {/* Carousel */}
         <div
+          {...handlers}
           className="max-w-4xl mx-auto relative"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
           <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 md:p-14 shadow-2xl transition-all duration-500">
-
             {/* Quote Icon */}
             <div className="absolute -top-6 left-10 bg-primary p-4 rounded-full shadow-lg">
               <Quote className="text-white w-6 h-6" />
@@ -125,7 +137,6 @@ export const Testimonials = () => {
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-6 mt-10">
-            
             <button
               onClick={previous}
               className="p-3 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-all duration-300"
@@ -154,7 +165,6 @@ export const Testimonials = () => {
             >
               <ChevronRight />
             </button>
-
           </div>
         </div>
       </div>
