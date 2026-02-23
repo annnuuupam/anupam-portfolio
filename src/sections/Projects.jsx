@@ -18,7 +18,7 @@ const projects = [
       "Payment Integration",
     ],
     link: "#", // add live link if deployed
-    github: "#", // add repo
+    github: "https://github.com/annnuuupam/SaleSavvyFullstakWbApplication", // add repo
   },
   {
     title: "AI Lung Cancer Detection System",
