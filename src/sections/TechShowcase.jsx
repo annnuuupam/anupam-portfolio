@@ -2,7 +2,7 @@ import { TechAnimation } from "@/components/TechAnimation";
 
 export const TechShowcase = () => {
   return (
-    <section id="skills" className="py-36 relative overflow-hidden">
+    <section id="skills" className="py-12 md:py-16 relative overflow-hidden">
       {/* Soft Background Glow */}
       <div
         className="absolute top-1/2 left-1/2 w-[800px] h-[800px] 

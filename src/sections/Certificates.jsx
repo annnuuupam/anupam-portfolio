@@ -56,9 +56,9 @@ export const Certificates = () => {
   const [preview, setPreview] = useState(null);
 
   return (
-    <section id="certificates" className="py-32 relative overflow-hidden">
+    <section id="certificates" className="py-12 md:py-16 relative overflow-hidden">
 
-      {/* Background Glow */}
+      {/* Soft Background Glow */}
       <div
         className="absolute top-1/2 left-1/2 w-[900px] h-[900px] 
         bg-primary/10 rounded-full blur-3xl 

@@ -1,19 +1,23 @@
 import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navLinks = [
+  { href: "#skills", label: "Skills" },
   { href: "#about", label: "About" },
-   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#certificates", label: "Certificates" },
   { href: "#testimonials", label: "Testimonials" },
 ];
 
+const navIds = navLinks.map((link) => link.href.substring(1));
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const activeSection = useActiveSection(navIds);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +50,11 @@ export const Navbar = () => {
               <a
                 href={link.href}
                 key={index}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                className={`px-4 py-2 text-sm rounded-full transition-colors ${
+                  activeSection === link.href.substring(1)
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                }`}
               >
                 {link.label}
               </a>
@@ -78,7 +86,11 @@ export const Navbar = () => {
                 href={link.href}
                 key={index}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                className={`text-lg py-2 transition-colors ${
+                  activeSection === link.href.substring(1)
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </a>

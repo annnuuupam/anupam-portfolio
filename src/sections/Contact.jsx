@@ -97,7 +97,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 sm:py-24 md:py-32 relative overflow-x-hidden"
+      className="py-12 md:py-16 relative overflow-x-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
