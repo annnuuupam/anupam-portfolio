@@ -52,7 +52,7 @@ export const About = () => {
               <p>
                 I'm Anupam Kumar, a passionate Full Stack Developer specializing
                 in Java, Spring Boot, React, and modern web technologies. As a
-                recent Computer Science graduate, I focus on building real-world
+                Computer Science graduate, I focus on building real-world
                 applications that solve meaningful problems and deliver seamless
                 user experiences.
               </p>
@@ -79,7 +79,7 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div

@@ -3,23 +3,24 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "SalesSavvy – Enterprise Full Stack E-Commerce Platform",
-    description:
-      "Engineered a production-style full stack e-commerce platform supporting authentication, product catalog, cart, order management, and secure payment processing. Designed scalable backend services using Spring Boot and REST APIs, integrated React + Redux for dynamic UI, and containerized the application with Docker for efficient deployment.",
-    image: "/projects/SalesSavvy.jpeg", // save screenshot
-    tags: [
-      "Java",
-      "Spring Boot",
-      "React",
-      "Redux",
-      "MySQL",
-      "Docker",
-      "REST APIs",
-      "Payment Integration",
-    ],
-    link: "#", // add live link if deployed
-    github: "https://github.com/annnuuupam/SaleSavvyFullstakWbApplication", // add repo
-  },
+  title: "NexCart – Full Stack E-Commerce Platform",
+  description:
+    "Built a full stack e-commerce platform featuring secure authentication, dynamic product catalog, real-time cart management, and admin product CRUD. Implemented REST APIs with Spring Boot, integrated React for a responsive UI, and delivered a scalable architecture for production-style deployment.",
+  image: "/projects/NexCart.png",
+  tags: [
+    "Java",
+    "Spring Boot",
+    "React",
+    "MySQL",
+    "REST APIs",
+    "Authentication",
+    "Cart System",
+    "Admin Dashboard",
+  ],
+  link: "https://nex-cart-alpha.vercel.app/",
+  github: "https://github.com/annnuuupam/NexCart",
+},
+
   {
     title: "AI Lung Cancer Detection System",
     description:
@@ -42,7 +43,7 @@ const projects = [
     title: "Catch The Insect – Interactive Browser Game",
     description:
       "Developed an interactive browser-based game using JavaScript where players catch moving insects against the clock. Implemented dynamic DOM manipulation, event-driven gameplay, score tracking, and increasing difficulty levels to enhance user engagement.",
-    image: "/projects/catch-insect.png", // add screenshot to public/projects
+    image: "/projects/catch-insect.png",
     tags: ["JavaScript", "HTML", "CSS", "Game Development", "DOM Manipulation"],
     link: "https://annnuuupam.github.io/Catch-The-Insect/",
     github: "https://github.com/annnuuupam/Catch-The-Insect",
@@ -99,18 +100,26 @@ export const Projects = () => {
                 />
                 {/* Overlay Links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
+                  {project.link !== "#" && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                  )}
+                  {project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
               </div>
 
