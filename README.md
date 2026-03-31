@@ -1,16 +1,67 @@
-# React + Vite
+# Anupam's Developer Portfolio ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, highly interactive web application showcasing my journey, experience, and projects as a software engineer. This portfolio features modern design aesthetics, including 3D tilt effects, physics-based animations, and a responsive glassmorphism UI.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+**[Live Demo](https://anupamkumar-portfolio.netlify.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
+- **Modern UI/UX**: Premium design utilizing glassmorphism, dynamic gradients, and custom scrolling behaviors.
+- **Advanced Animations**: Staggered scroll-reveal sequences, 3D interactive tilt cards, and physics-based movement powered by Framer Motion.
+- **Active Navigation**: Intelligent, scroll-aware navigation highlighting the active section in real-time.
+- **Interactive Tech Stack**: Lottie animations complementing the skills and technology showcase.
+- **Contact Integration**: Fully functional, stylized contact form directly integrated with EmailJS for seamless communication.
 
-## React Compiler
+## 🛠️ Built With
+- **[React 19](https://react.dev/)**
+- **[Vite](https://vitejs.dev/)** for ultra-fast development and build tooling
+- **[Tailwind CSS v4](https://tailwindcss.com/)** for rapid and highly customizable styling
+- **[Framer Motion](https://www.framer.com/motion/)** for all complex physics-based micro-interactions and scroll animations
+- **[Lucide React](https://lucide.dev/)** for clean, scalable icons
+- **[EmailJS](https://www.emailjs.com/)** for backend-less email processing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Local Development
 
-## Expanding the ESLint configuration
+To get a local copy up and running, follow these simple steps:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/annnuuupam/anupam-portfolio.git
+   ```
+
+2. **Navigate into the project directory**
+   ```bash
+   cd anupam-portfolio
+   ```
+
+3. **Install NPM packages**
+   ```bash
+   npm install
+   ```
+
+4. **Environment Variables Config**  
+   Create a `.env` file in the root directory and add your EmailJS configuration. These are required for the contact form to function properly:
+   ```env
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   ```
+
+5. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+
+## 📬 Contact & Socials
+
+- **GitHub**: [@annnuuupam](https://github.com/annnuuupam)
+- **LinkedIn**: [Anupam Kumar](https://www.linkedin.com/in/anupam3062/)
+- **Email**: [anupamkumar3062@gmail.com](mailto:anupamkumar3062@gmail.com)
+
+---
+Designed and developed by Anupam Kumar.
