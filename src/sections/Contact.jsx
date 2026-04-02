@@ -176,6 +176,7 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  id="message"
                   rows={5}
                   required
                   value={formData.message}
@@ -235,6 +236,9 @@ export const Contact = () => {
                   <a
                     key={i}
                     href={item.href}
+                    onClick={(e) => {
+                      if (item.href === "#") e.preventDefault();
+                    }}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

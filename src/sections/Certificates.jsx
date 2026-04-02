@@ -141,6 +141,7 @@ export const Certificates = () => {
                   <a
                     href={cert.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1 hover:text-primary"
                   >
                     View
@@ -171,6 +172,7 @@ export const Certificates = () => {
 
           <img
             src={preview}
+            alt="Certificate Preview"
             className="max-h-[90vh] max-w-[90vw]
             rounded-xl shadow-2xl border border-white/10"
           />

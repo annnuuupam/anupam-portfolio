@@ -7,7 +7,7 @@ import { Experience } from "@/sections/Experience";
 import { Certificates } from "@/sections/Certificates";
 import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
-import { Footer } from "./layout/Footer";
+import { Footer } from "@/layout/Footer";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <TechShowcase />
         <About />
+        <TechShowcase />
         <Projects />
         <Experience />
         <Certificates />

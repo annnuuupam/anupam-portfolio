@@ -1,10 +1,10 @@
 import { Download } from "lucide-react";
 
-export const AnimatedBorderButton = ({ children, href }) => {
+export const AnimatedBorderButton = ({ children, href, ...props }) => {
   return (
     <a
       href={href}
-      download
+      {...props}
       target="_blank"
       rel="noopener noreferrer"
       className="relative inline-block bg-transparent border border-border 

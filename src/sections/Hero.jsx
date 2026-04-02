@@ -47,7 +47,7 @@ export const Hero = () => {
   );
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0">
         <img
@@ -115,7 +115,7 @@ export const Hero = () => {
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <AnimatedBorderButton href="/Anupam_Resume.pdf">
+              <AnimatedBorderButton href="/Anupam_Resume.pdf" download="Anupam_Resume.pdf">
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
@@ -183,7 +183,7 @@ export const Hero = () => {
         </div>
 
         {/* Skills Section*/}
-        <div className="mt-20 animate-fade-in animate-delay-600">
+        <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>

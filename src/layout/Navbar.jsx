@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navLinks = [
-  { href: "#skills", label: "Skills" },
   { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#certificates", label: "Certificates" },
@@ -37,7 +37,7 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
-          href="#"
+          href="#home"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
           AK<span className="text-primary">.</span>

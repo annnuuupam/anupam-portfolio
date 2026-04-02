@@ -1,4 +1,4 @@
-import { Github, Linkedin, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
   { 
@@ -32,7 +32,7 @@ export const Footer = () => {
           
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#" className="text-xl font-bold tracking-tight">
+            <a href="#home" className="text-xl font-bold tracking-tight">
               AK<span className="text-primary">.</span>
             </a>
 
@@ -40,8 +40,7 @@ export const Footer = () => {
               © {currentYear} Anupam Kumar. All rights reserved.
             </p>
 
-            <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center md:justify-start gap-1">
-            </p>
+
           </div>
 
           {/* Navigation */}

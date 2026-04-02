@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSwipeable } from "react-swipeable";
 
 const testimonials = [
@@ -44,15 +44,15 @@ export const Testimonials = () => {
   const [activeIdx, setActiveIdx] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  const next = () => {
+  const next = useCallback(() => {
     setActiveIdx((prev) => (prev + 1) % testimonials.length);
-  };
+  }, []);
 
-  const previous = () => {
+  const previous = useCallback(() => {
     setActiveIdx(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
-  };
+  }, []);
 
   // Auto Slide
   useEffect(() => {
@@ -63,7 +63,7 @@ export const Testimonials = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [paused, next]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
