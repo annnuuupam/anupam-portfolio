@@ -28,7 +28,7 @@ const projects = [
     image: "/projects/lung-cancer.png",
     tags: ["Python", "Machine Learning", "Django", "Random Forest"],
     link: "#",
-    github: "#",
+    github: "https://github.com/annnuuupam/Lungs-Cancer-Detection",
   },
   {
     title: "Face Recognition Attendance System",
@@ -78,34 +78,33 @@ export const Projects = () => {
           </p>
         </div>
 
-        {/* Grid */}
-         <div className="grid md:grid-cols-2 gap-8">
+        {/* Grid Layout: 4 Cards Horizontally on One Line */}
+         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-screen-2xl w-full mx-auto">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              className="group glass rounded-2xl overflow-hidden flex flex-col animate-fade-in hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 border border-white/5 hover:border-primary/40"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
-              {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
+              {/* Image Section */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div
-                  className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
+                  className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent opacity-90"
                 />
+                
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/40 backdrop-blur-[2px]">
                   {project.link !== "#" && (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transform hover:scale-110 transition-all shadow-lg"
                     >
                       <ArrowUpRight className="w-5 h-5" />
                     </a>
@@ -115,7 +114,7 @@ export const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transform hover:scale-110 transition-all shadow-lg"
                     >
                       <Github className="w-5 h-5" />
                     </a>
@@ -123,31 +122,35 @@ export const Projects = () => {
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+              {/* Content Section */}
+              <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-card/50 to-transparent">
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors leading-tight line-clamp-2">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
+                   <ArrowUpRight
+                    className="w-5 h-5 flex-shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
                   />
                 </div>
-                <p className="text-muted-foreground text-sm">
+                
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-6 flex-grow">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIdx) => (
+                
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {project.tags.slice(0, 5).map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      className="px-2.5 py-1 rounded-md bg-white/[0.03] text-[10px] font-semibold tracking-wider uppercase border border-white/10 text-muted-foreground group-hover:border-primary/40 group-hover:text-primary transition-all duration-300"
                     >
                       {tag}
                     </span>
                   ))}
+                  {project.tags.length > 5 && (
+                    <span className="px-2.5 py-1 rounded-md bg-white/[0.03] text-[10px] font-semibold tracking-wider border border-white/10 text-muted-foreground">
+                      +{project.tags.length - 5}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

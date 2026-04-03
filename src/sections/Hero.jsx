@@ -202,10 +202,14 @@ export const Hero = () => {
       </div>
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+      animate-fade-in animation-delay-800 z-20 cursor-pointer"
       >
         <a
           href="#about"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+          }}
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>

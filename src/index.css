@@ -183,10 +183,6 @@
   }
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 
 *,
 *::before,
