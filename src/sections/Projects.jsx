@@ -20,6 +20,15 @@ const projects = [
   link: "https://nex-cart-alpha.vercel.app/",
   github: "https://github.com/annnuuupam/NexCart",
 },
+{
+    title: "DSA Progress Tracker",
+    description:
+      "DSA Progress Tracker is a comprehensive web application designed to help students and developers track their progress in Data Structures and Algorithms (DSA). It features a seamless integration with Google Sheets to log solved problems, live statistics from LeetCode and GeeksforGeeks, interactive roadmap visualization, streak tracking to maintain consistency, and shareable progress links for collaboration. Built with modern web technologies, the platform provides an intuitive interface to monitor coding proficiency and stay motivated on the learning journey.",
+    image: "/projects/dsa-tracker.png",
+    tags: ["Firebase","JavaScript","HTML5", "CSS3", "Google Sheets","REST APIs"],
+    link: "https://dsa-tracker-rho-cyan.vercel.app/",
+    github: "https://github.com/annnuuupam/DSA-Tracker",
+  },
 
   {
     title: "AI Lung Cancer Detection System",
@@ -39,15 +48,7 @@ const projects = [
     link: "#",
     github: "https://github.com/annnuuupam/Face-Attendance",
   },
-  {
-    title: "Catch The Insect – Interactive Browser Game",
-    description:
-      "Developed an interactive browser-based game using JavaScript where players catch moving insects against the clock. Implemented dynamic DOM manipulation, event-driven gameplay, score tracking, and increasing difficulty levels to enhance user engagement.",
-    image: "/projects/catch-insect.png",
-    tags: ["JavaScript", "HTML", "CSS", "Game Development", "DOM Manipulation"],
-    link: "https://annnuuupam.github.io/Catch-The-Insect/",
-    github: "https://github.com/annnuuupam/Catch-The-Insect",
-  },
+  
 ];
 
 export const Projects = () => {

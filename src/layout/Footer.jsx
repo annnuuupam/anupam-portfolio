@@ -1,4 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
+import { LeetCodeIcon, GeeksforGeeksIcon } from "@/components/Icons";
 
 const socialLinks = [
   { 
@@ -11,11 +12,22 @@ const socialLinks = [
     href: "https://linkedin.com/in/anupam3062", 
     label: "LinkedIn" 
   },
+  { 
+    icon: LeetCodeIcon, 
+    href: "https://leetcode.com/u/annnuuupam/", 
+    label: "LeetCode" 
+  },
+  { 
+    icon: GeeksforGeeksIcon, 
+    href: "https://www.geeksforgeeks.org/profile/annnuuupam", 
+    label: "GeeksforGeeks" 
+  },
 ];
 
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#coding", label: "Coding Profiles" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#certificates", label: "Certificates" },

@@ -8,6 +8,8 @@ import {
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { LeetCodeIcon, GeeksforGeeksIcon } from "@/components/Icons";
+
 
 const skills = [
   "Java",
@@ -128,15 +130,32 @@ export const Hero = () => {
                 {
                   icon: Linkedin,
                   href: "https://www.linkedin.com/in/anupam3062/",
+                  label: "LinkedIn",
                 },
-                { icon: Github, href: "https://github.com/annnuuupam" },
+                {
+                  icon: Github,
+                  href: "https://github.com/annnuuupam",
+                  label: "GitHub",
+                },
+                {
+                  icon: LeetCodeIcon,
+                  href: "https://leetcode.com/u/annnuuupam/",
+                  label: "LeetCode",
+                },
+                {
+                  icon: GeeksforGeeksIcon,
+                  href: "https://www.geeksforgeeks.org/profile/annnuuupam",
+                  label: "GeeksforGeeks",
+                },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                  aria-label={social.label}
+                  title={social.label}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 flex items-center justify-center"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

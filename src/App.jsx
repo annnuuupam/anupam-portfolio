@@ -2,6 +2,7 @@ import { Navbar } from "@/layout/Navbar";
 import { Hero } from "@/sections/Hero";
 import { TechShowcase } from "@/sections/TechShowcase";
 import { About } from "@/sections/About";
+import { CodingProfiles } from "@/sections/CodingProfiles";
 import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Certificates } from "@/sections/Certificates";
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <About />
         <TechShowcase />
+        <CodingProfiles />
         <Projects />
         <Experience />
         <Certificates />
