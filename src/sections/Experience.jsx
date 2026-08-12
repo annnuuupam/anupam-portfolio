@@ -2,22 +2,21 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    period: "Jun 2025 — Present",
-    role: "Software Development Intern – Java Full Stack",
-    company: "KodNest Technologies, Bengaluru",
-    description:
-      "Developing full-stack applications using Java, Spring Boot, Hibernate, JDBC, and MySQL. Engineered a Point of Sale (POS) Management System with secure authentication, structured business logic, and efficient database integration. Designing RESTful APIs and improving application performance through debugging, testing, and optimization while following industry-standard coding practices.",
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Hibernate",
-      "JDBC",
-      "MySQL",
-      "REST APIs",
-      "Spring Security",
-    ],
-    current: true,
-  },
+  period: "Jun 2025 — Present",
+  role: "Java Full Stack Developer (Trainee)",
+  company: "KodNest Technologies, Bengaluru",
+  description:
+    "Completed intensive full-stack training in Java, Spring Boot, React, and MySQL with hands-on project development. Built RESTful APIs, implemented CRUD database operations, and developed end-to-end full-stack applications. Gained practical exposure to SDLC, agile practices, debugging, and code optimization.",
+  technologies: [
+    "Java",
+    "Spring Boot",
+    "React",
+    "MySQL",
+    "REST APIs",
+    "CRUD",
+  ],
+  current: true,
+},
   {
     period: "2024 — 2025",
     role: "Software Engineer (Project Experience)",
